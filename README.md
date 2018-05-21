@@ -1,7 +1,3 @@
-# Ask
-
-Question and Answer
-
 ### 打造一个知识问答，知识分享的平台，通过这个平台，我们的目标是：
 
 1. 悬赏答题；
@@ -13,7 +9,6 @@ Question and Answer
 1. 会员制服务
 2. 相关模块定制，购买
 3. 精华问题定制生成pdf, 会员内容订阅
-4. 
 
 ### 参与人员：
 
@@ -46,6 +41,24 @@ Question and Answer
 2. 数据库设计：MongoDB
 3. 支付设计：悬赏者扫码支付后，手机端app监听支付宝，微信的支付到账信息，回调网站api，修改支付状态。
 4. QQ群：14272794
-5. 
 
 
+## Install dependencies
+
+```
+npm install
+```
+
+## Start server
+
+```
+npm start
+```
+
+## Deploy with pm2
+
+Use pm2 to deploy app on production enviroment.
+
+```
+pm2 startOrReload pm2.json
+```
