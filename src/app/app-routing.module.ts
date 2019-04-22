@@ -45,10 +45,6 @@ const routes: Routes = [
         loadChildren: './ask/ask.module#AskModule'
       },
       {
-        path: 'db',
-        loadChildren: './db/db.module#DbModule'
-      },
-      {
         path: 'calendar',
         component: TodoCalendarComponent
       },

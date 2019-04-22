@@ -41,16 +41,16 @@ export const navItems: NavData[] = [
   },
   {
     title: true,
-    name: '数据库'
+    name: '问答专区'
   },
   {
-    name: '数据库列表',
-    url: '/db/dblist',
+    name: '最新问答',
+    url: '/ask/asklist',
     icon: 'icon-drop'
   },
   {
-    name: '添加表',
-    url: '/db/dbform',
+    name: '我要提问',
+    url: '/ask/askform',
     icon: 'icon-drop'
   },
   {
