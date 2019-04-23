@@ -4,7 +4,7 @@
       <div class="card">
         <div class="card-header">
           Calendar
-          <small> dynamic slides</small>
+          <small> 我的计划</small>
         </div>
         <div class="card-body">
           <div class='app'>
@@ -15,18 +15,46 @@
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
       }" [plugins]="calendarPlugins" [weekends]="calendarWeekends" [events]="calendarEvents"
-                (dateClick)="handleDateClick($event)"></full-calendar>
+                (dateClick)="handleDateClick($event)" (eventClick)="handEventClick($event)"></full-calendar>
             </div>
 
           </div>
           <div class='app-top'>
-              <button (click)='toggleVisible()'>toggle visible</button>
-              <button (click)='toggleWeekends()'>toggle weekends</button>
-              <button (click)='gotoPast()'>go to a date in the past</button>
-              (also, click a date/time to add an event)
-            </div>
+            <button (click)='toggleVisible()'>toggle visible</button>
+            <button (click)='toggleWeekends()'>toggle weekends</button>
+            <button (click)='gotoPast()'>go to a date in the past</button>
+            (also, click a date/time to add an event)
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<div bsModal #infoModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-info" role="document">
+    <form [formGroup]="profileForm" class="form-horizontal" (ngSubmit)="onSubmit()">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">添加计划</h4>
+          <button type="button" class="close" (click)="infoModal.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group row">
+            <div class="col-md-12">
+              <textarea id="textarea-input" formControlName="todotask" required name="textarea-input" rows="5" class="form-control"
+                placeholder="Content.."></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="infoModal.hide()">关闭</button>
+          <button type="submit" [disabled]="!profileForm.valid" class="btn btn-info">保存</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </form>
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

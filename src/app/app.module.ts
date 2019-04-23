@@ -5,6 +5,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PerfectScrollbarModule, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { PopoverModule } from 'ngx-bootstrap/popover';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FullCalendarModule } from '@fullcalendar/angular'; // for FullCalendar!
@@ -42,6 +44,8 @@ import { TodoCalendarComponent } from './todo-calendar/todo-calendar.component';
     ReactiveFormsModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
+    ModalModule.forRoot(),
+    PopoverModule,
     AppFooterModule,
     AppHeaderModule,
     AppSidebarModule,

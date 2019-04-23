@@ -46,7 +46,10 @@ const routes: Routes = [
       },
       {
         path: 'calendar',
-        component: TodoCalendarComponent
+        component: TodoCalendarComponent,
+        data: {
+          title: 'Calendar'
+        },
       },
     ]
   },

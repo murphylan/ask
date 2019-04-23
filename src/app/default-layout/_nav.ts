@@ -46,12 +46,12 @@ export const navItems: NavData[] = [
   {
     name: '最新问答',
     url: '/ask/asklist',
-    icon: 'icon-drop'
+    icon: 'icon-list'
   },
   {
     name: '我要提问',
     url: '/ask/askform',
-    icon: 'icon-drop'
+    icon: 'icon-pencil'
   },
   {
     divider: true
@@ -59,6 +59,6 @@ export const navItems: NavData[] = [
   {
     name: '日历',
     url: '/calendar',
-    icon: 'icon-drop'
+    icon: 'icon-calendar'
   },
 ];
