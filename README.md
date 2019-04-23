@@ -5,6 +5,8 @@
 1. 悬赏答疑，挑战技术难题；
 2. 发布任务；
 
+![Description of the image](readme/ask.png)
+
 ### 网站模块：
 
 ####  会员管理
